@@ -2,13 +2,15 @@
 #include "Float.h"
 
 int main() {
-    FloatCell variable;
+    FloatCell Cell;
     float n;
     std::cout << "intrduzca un numero" << std::endl;
     std::cin >> n;
 
-    variable.setValue(n);
+    Cell.setValue(n);
 
-    std::cout << "el valor es: " << variable.getValue();
+    std::cout << "el valor es: " << Cell.getValue() << std::endl;
+
+    std::cout << "Tu clase si funciona :D";
 
 }
