@@ -1,0 +1,3 @@
+C:/Users/miky_/Documents/Personal/Escuela/Semestre3/Programacion/RepoProgra3/IntCell/cmake-build-debug/CMakeFiles/IntCell.dir
+C:/Users/miky_/Documents/Personal/Escuela/Semestre3/Programacion/RepoProgra3/IntCell/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/miky_/Documents/Personal/Escuela/Semestre3/Programacion/RepoProgra3/IntCell/cmake-build-debug/CMakeFiles/rebuild_cache.dir

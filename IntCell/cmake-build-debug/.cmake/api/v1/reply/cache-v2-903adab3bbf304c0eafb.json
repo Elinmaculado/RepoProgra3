@@ -39,7 +39,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/miky_/Documents/Personal/Escuela/Semestre3/Programacion/Tema1/cmake-build-debug"
+			"value" : "c:/Users/miky_/Documents/Personal/Escuela/Semestre3/Programacion/RepoProgra3/IntCell/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -479,7 +479,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/miky_/Documents/Personal/Escuela/Semestre3/Programacion/Tema1/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "C:/Users/miky_/Documents/Personal/Escuela/Semestre3/Programacion/RepoProgra3/IntCell/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -539,7 +539,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/miky_/Documents/Personal/Escuela/Semestre3/Programacion/Tema1"
+			"value" : "C:/Users/miky_/Documents/Personal/Escuela/Semestre3/Programacion/RepoProgra3/IntCell"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -551,7 +551,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Program Files (x86)/Tema1"
+			"value" : "C:/Program Files (x86)/IntCell"
 		},
 		{
 			"name" : "CMAKE_LINKER",
@@ -735,7 +735,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "Tema1"
+			"value" : "IntCell"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1078,7 +1078,7 @@
 			"value" : "FALSE"
 		},
 		{
-			"name" : "Tema1_BINARY_DIR",
+			"name" : "IntCell_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -1087,10 +1087,10 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/miky_/Documents/Personal/Escuela/Semestre3/Programacion/Tema1/cmake-build-debug"
+			"value" : "C:/Users/miky_/Documents/Personal/Escuela/Semestre3/Programacion/RepoProgra3/IntCell/cmake-build-debug"
 		},
 		{
-			"name" : "Tema1_IS_TOP_LEVEL",
+			"name" : "IntCell_IS_TOP_LEVEL",
 			"properties" : 
 			[
 				{
@@ -1102,7 +1102,7 @@
 			"value" : "ON"
 		},
 		{
-			"name" : "Tema1_SOURCE_DIR",
+			"name" : "IntCell_SOURCE_DIR",
 			"properties" : 
 			[
 				{
@@ -1111,7 +1111,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/miky_/Documents/Personal/Escuela/Semestre3/Programacion/Tema1"
+			"value" : "C:/Users/miky_/Documents/Personal/Escuela/Semestre3/Programacion/RepoProgra3/IntCell"
 		}
 	],
 	"kind" : "cache",
