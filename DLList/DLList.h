@@ -43,7 +43,7 @@ public:
                 throw std::logic_error("Trying to increment past the end.");
             return *this;
         }
-
+        //posicion
         iterator operator++(int) {
             iterator old = *this;
             ++(*this);
@@ -124,8 +124,6 @@ public:
     void push_back(Object &&x) { insert(end(), std::move(x)); }
 
 
-
-
     //elimina el valo de en frente
     void pop_front() {
         if(empty())
@@ -177,7 +175,7 @@ public:
         theSize--;
         return iterator(p->next);
     }
-
+    //llama a getiterator por si pasan un entero otra vez
     void erase(int pos)
     {
         erase(get_iterator(pos));
