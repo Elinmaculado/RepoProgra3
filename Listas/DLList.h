@@ -6,7 +6,7 @@
 
 template <typename Object>
 class DLList{
-private:
+protected:
     struct Node  {
         Object data;
         Node *next;
@@ -58,6 +58,14 @@ public:
             return *this;
         }
 
+        iterator &operator+(int addition){
+
+            for(int i = 0; i<addition;i++){
+                ++(*this);
+            }
+            return  *this;
+        }
+
         iterator operator--(int) {
             iterator old = *this;
             --(*this);
@@ -73,7 +81,7 @@ public:
             return !(*this == rhs);
         }
 
-    private:
+    protected:
         //apunta al nodo al que estoy trabajando en ese momento
         Node *current;
         iterator(Node *p) : current{p} {}
@@ -192,8 +200,7 @@ public:
     }
 
 
-
-private:
+protected:
     Node *head;
     Node *tail;
     int theSize;
