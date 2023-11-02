@@ -12,71 +12,84 @@
 
 //Se utiliza template para trabajar con todo tipo de dato primitivo
 template <typename T>
-//inicio del template del nodo
 class Node {
 public:
-    T data;// Aqui se guarda el dato que contiene el nodo
-    int height;//Nivel del arbol
-    std::shared_ptr<Node<T>> left;//Declaración de nodo izquierdo
-    std::shared_ptr<Node<T>> right;//Declaración de nodo derecho
+    // Aqui se guarda el dato que contiene el nodo
+    T data;
+    //Nivel del arbol
+    int height;
+    //Declaración de los punteros para nodo izquierdo y derecho
+    std::shared_ptr<Node<T>> left;
+    std::shared_ptr<Node<T>> right;
 
-    //Constructor default
+    //Definición del nodo
     Node(T data) : data(data), height(1), left(nullptr), right(nullptr) {}
 };
 
-template <typename T> //Inicio del template para el árbol
+template <typename T>
 class AVLTree {
 public:
     //Se declara el nodo raiz
-    std::shared_ptr<Node<T>> root;
-    //Se inicializa la raíz vacía
-    AVLTree(): root(nullptr) {}
+    std::shared_ptr <Node<T>> root;
 
-    //Funcion para añadir datos a un nodo dentro del arbol
+    //el árbol hereda el nodo raíz
+    AVLTree() : root(nullptr) {}
+
+    //Funcion para añadir un dato al nodo raíz
     void add(T data) {
         root = insert(root, data);
     }
-    //Funcion para borrar informacion dentro del nodo
-    void remove(T data)  {
+
+    //Funcion para borrar informacion dentro del nodo raíz
+    void remove(T data) {
         root = deleteNode(root, data);
     }
 
     void print() {
-        //Si la Raiz no esta vacia, se devuelve esta misma
         if (root != nullptr) {
+            //Si la Raiz no esta vacia, se devuelve esta misma
             print(root, 0);
-            //De otra forma se deja claro que el árbol como tal esta vacío
         } else {
+            //De otra forma marca error ya que el árbol está vacío
             std::cout << "The tree is empty." << std::endl;
         }
     }
 
 private:
     //función para imprimir el árbol
-    void print(std::shared_ptr<Node<T>> node, int indent) {
-        if(node) {
-            if(node->right) {
+    void print(std::shared_ptr <Node<T>> node, int indent) {
+        if (node) {
+            //Revisa que haya nodo a la derecha y se mueve a el
+            if (node->right) {
+                //Imprime el nodo a la derecha del nodo actual
                 print(node->right, indent + 8);
             }
+            //Si indent tiene valor, Este valor se le asigna a width
             if (indent) {
+                //setw = setwidth
                 std::cout << std::setw(indent) << ' ';
             }
+            //Revisa que haya nodo a la derecha y se mueve a el
             if (node->right) {
+                //Imprime el valor derecho del nodo actual
                 std::cout << " / (Right of " << node->data << ")\n" << std::setw(indent) << ' ';
             }
-            std::cout << node->data << "\n" ;
+            std::cout << node->data << "\n";
             if (node->left) {
+                //imprime el lado izquierdo
                 std::cout << std::setw(indent) << ' ' << " \\ (Left of " << node->data << ")\n";
                 print(node->left, indent + 8);
             }
         }
     }
 
-    //
-    std::shared_ptr<Node<T>> newNode(T data) {
+    //Se crea un nuevo nodo
+    std::shared_ptr <Node<T>> newNode(T data) {
         return std::make_shared<Node<T>>(data);
     }
 
+    //Rotaciones
+    //Rotacion a la derecha
     std::shared_ptr<Node<T>> rightRotate(std::shared_ptr<Node<T>> y) {
         std::shared_ptr<Node<T>> x = y->left;
         std::shared_ptr<Node<T>> T2 = x->right;
@@ -90,6 +103,7 @@ private:
         return x;
     }
 
+    //Rotación a la derecha
     std::shared_ptr<Node<T>> leftRotate(std::shared_ptr<Node<T>> x) {
         std::shared_ptr<Node<T>> y = x->right;
         std::shared_ptr<Node<T>> T2 = y->left;
@@ -109,6 +123,7 @@ private:
         return height(N->left) - height(N->right);
     }
 
+    //Se inserta un nodo cuidando mantener el balance
     std::shared_ptr<Node<T>> insert(std::shared_ptr<Node<T>> node, T data) {
         if (node == nullptr)
             return (newNode(data));
@@ -143,6 +158,7 @@ private:
         return node;
     }
 
+    //Funcion para calular el minvalue
     std::shared_ptr<Node<T>> minValueNode(std::shared_ptr<Node<T>> node) {
         std::shared_ptr<Node<T>> current = node;
 
@@ -152,6 +168,7 @@ private:
         return current;
     }
 
+    //Funcion para eliminar un nodo
     std::shared_ptr<Node<T>> deleteNode(std::shared_ptr<Node<T>> root, T data) {
         if (!root)
             return root;
@@ -199,7 +216,7 @@ private:
 
         return root;
     }
-    //
+    //Funcion para obtener la altura
     int height(std::shared_ptr<Node<T>> N) {
         if (N == nullptr)
             return 0;

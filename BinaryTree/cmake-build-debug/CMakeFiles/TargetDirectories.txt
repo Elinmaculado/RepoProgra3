@@ -1,3 +1,0 @@
-C:/Users/miky_/Documents/Personal/Escuela/Semestre3/Programacion/RepoProgra3/BinaryTree/cmake-build-debug/CMakeFiles/BinaryTree.dir
-C:/Users/miky_/Documents/Personal/Escuela/Semestre3/Programacion/RepoProgra3/BinaryTree/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/miky_/Documents/Personal/Escuela/Semestre3/Programacion/RepoProgra3/BinaryTree/cmake-build-debug/CMakeFiles/rebuild_cache.dir
